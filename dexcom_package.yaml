@@ -1,0 +1,28 @@
+ # bolita-dexcom package
+# This file provides the data and fonts for Dexcom integration
+substitutions:
+  # Users will override these in the main YAML (your by the user name in Dexcom)
+  dexcom_glucose_sensor: "sensor.your_glucose_value"
+  dexcom_trend_sensor: "sensor.your_glucose_trend"
+
+font:
+  - file:
+      type: gfonts
+      family: ${font_family}
+      weight: 700
+    id: font_dexcom
+    size: 60
+    glyphsets:
+      - ${font_glyphsets}
+    glyphs: ["↑", "↗", "→", "↘", "↓", "↙", "←", "↖"]
+
+sensor:
+  - platform: homeassistant
+    id: glucose_value
+    entity_id: ${dexcom_glucose_sensor}
+    force_update: true
+
+text_sensor:
+  - platform: homeassistant
+    id: glucose_trend
+    entity_id: ${dexcom_trend_sensor}

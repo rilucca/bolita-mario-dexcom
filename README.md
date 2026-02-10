@@ -41,6 +41,21 @@ A custom package for the Xiaozhi "Bolita" to display real-time Dexcom glucose le
 *   **Thresholds:** The glucose color levels (Yellow/Red) are currently fixed in the YAML code. Future versions will aim to make these configurable via Home Assistant helpers.
 *   **Audio Alarms:** Sound alerts and notifications are **not** managed by the ESP32 code. You must configure your automations and audio triggers directly within **Home Assistant**.
 *   **Hardware:** Optimized specifically for the Xiaozhi "Bolita" V2 (S3 Box) with a round 240x240 LCD.
+---
+
+**Current Version:** Beta V1 (Optimized for **mmol/L**)
+
+### 🎨 Glucose Color Thresholds:
+The visual ring logic is currently set as follows:
+- **🔴 Red Ring:** Glucose below **4.0** mmol/L.
+- **🟡 Yellow Ring:** Glucose above **10.0** mmol/L.
+- **🔴/🟡 Double Red/Yellow Ring:** Glucose above **14.0** mmol/L.
+- **Manual Adjustments:** To change these thresholds, edit the `Ball-v2-3Mario.yaml` file around **line 1111** and modify the values manually.
+
+### 🔊 Audio & Automation Tips:
+- **Audio Alarms:** Sound notifications must be triggered via **Home Assistant automations**.
+- **Important Delay:** When sending an audio alert, please add a **delay of approximately 8 seconds** before playing the alarm sound. The I2S audio driver can become congested during simultaneous display/voice tasks; this delay ensures smooth playback.
+- **Units:** This logic is exclusive to `mmol/L`. If you use `mg/dL`, the thresholds will not trigger correctly.
 
 ---
 

@@ -58,6 +58,33 @@ The visual ring logic is currently set as follows:
 - **Important Delay:** When sending an audio alert, please add a **delay of approximately 8 seconds** before playing the alarm sound. The I2S audio driver can become congested during simultaneous display/voice tasks; this delay ensures smooth playback.
 - **Units:** This logic is exclusive to `mmol/L`. If you use `mg/dL`, the thresholds will not trigger correctly.
 
+## 🚀 Features & Capabilities (The Technical Stuff)
+
+This "Bolita" version is built on ESPHome, offering a robust and flexible alternative to commercial monitors.
+
+### 📊 Glucose Monitoring
+- **Real-Time Display:** Simple and clear glucose value with trend arrows (Steady, Rising, Falling).
+- **Dynamic Color Logic:** The screen ring changes color automatically based on thresholds (Red < 4.0, Yellow > 10.0, Double Red/Yellow > 14.0 mmol/L).
+- **Official Integration:** Powered by the [Home Assistant Dexcom Integration](https://www.home-assistant.io).
+- **Smart Refresh:** Data is pulled from the Dexcom Cloud, ensuring your Bolita stays synced with your transmitter.
+
+### 🎙️ Voice & Audio (Smart Assistant)
+- **Voice Assistant:** Integrated with Home Assistant Assist. It hears you and speaks back!
+- **Male Voice Profile:** Optimized for the **"Ryan" (Piper)** high-quality natural voice.
+- **Custom Wake Word:** Supports **"Hey Mario"** or **"Computer"** via openWakeWord/Wyoming.
+- **Configurable Alarms:** Sound alerts are managed via Home Assistant automations, allowing for custom volumes and snooze intervals.
+- **I2S Stability:** Hardware-tuned buffers to prevent audio congestion during high-traffic updates.
+
+### 🖼️ UI & Customization
+- **Mario Themed UI:** Custom full-color icons for every state (Idle, Listening, Thinking, Error).
+- **High Visibility:** 240x240 round LCD optimized for clear reading from up to 3 meters away.
+- **Brightness Control:** Can be adjusted directly via Home Assistant dashboard or automations.
+- **Privacy First:** All personal credentials (Wi-Fi, Dexcom user) are handled via `secrets.yaml` and never hardcoded in the main firmware.
+
+### 📡 Connectivity & System
+- **WiFi Stability:** Optimized for unified 2.4/5GHz routers (like Telus) using specific ESP32-S3 handshake logic.
+- **Captive Portal:** Includes a fallback AP mode for initial Wi-Fi configuration if the main network is unreachable.
+- **OTA Updates:** Supports Over-The-Air updates—no need to plug it into the computer once installed.
 ---
 
 

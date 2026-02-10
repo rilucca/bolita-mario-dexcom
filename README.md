@@ -11,6 +11,7 @@ A custom package for the Xiaozhi "Bolita" to display real-time Dexcom glucose le
   <img src="BolitaHight.jpg" width="220" alt="Bolita Alerta 16.2">
   <img src="BolitaMarioL.jpg" width="220" alt="Mario Escuchando">
   <img src="BolitaDrop.jpg" width="220" alt="Bolita Bajando">
+  <img src="BallV2TouchBattery.png" width="220" alt="Bolita AliExpress">
 </p>
 ---
 

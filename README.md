@@ -7,11 +7,11 @@ A custom package for the Xiaozhi "Bolita" to display real-time Dexcom glucose le
 
 ### 📸 Bolita en Acción
 <p align="center">
-  <img src="BolitaNormal.jpg" width="220" alt="Bolita Normal">
-  <img src="BolitaHight.jpg" width="220" alt="Bolita Alerta 16.2">
-  <img src="BolitaMarioL.jpg" width="220" alt="Mario Escuchando">
-  <img src="BolitaDrop.jpg" width="220" alt="Bolita Bajando">
-  <img src="BallV2TouchBattery.png" width="220" alt="Bolita AliExpress">
+  <img src=".assets/BolitaNormal.jpg" width="220" alt="Bolita Normal">
+  <img src=".assets/BolitaHight.jpg" width="220" alt="Bolita Alerta 16.2">
+  <img src=".assets/BolitaMarioL.jpg" width="220" alt="Mario Escuchando">
+  <img src=".assets/BolitaDrop.jpg" width="220" alt="Bolita Bajando">
+  <img src=".assets/BallV2TouchBattery.png" width="220" alt="Bolita AliExpress">
 </p>
 ---
 

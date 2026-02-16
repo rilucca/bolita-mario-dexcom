@@ -95,7 +95,24 @@ This "Bolita" version is built on ESPHome, offering a robust and flexible altern
 
 ```yaml
 # secrets.yaml
-wifi_ssid: "YOUR_WIFI_NAME"
+# 1. Wi-Fi Configuration
+wifi_ssid: "YOUR_WIFI_SSID"
 wifi_password: "YOUR_WIFI_PASSWORD"
-dexcom_username: "YOUR_DEXCOM_USER"  # Example: locolucca
 
+# 2. Dexcom user Configuration
+# Replace (locolucca) with your actual Dexcom username
+dexcom_username: "locolucca"
+
+# 3. Alarm values settings in mmol/L  (red below set point) (yellow above and Yellow & Red above)
+glucose_min_red: "4.0"
+glucose_pre_high_yellow: "10.0"
+glucose_max_alarm: "14.0"
+
+
+# 4. API & OTA Configuration
+# Generate your 32-byte (64-character) (if you are running ESPHome outside of your HA, you will need a api number)
+# Get one api key here: https://esphome.io/components/api/ 
+api_encryption_key: "YOUR_GENERATED_KEY_HERE"
+
+# Optional: OTA Password
+# ota_password: "YOUR_OTA_PASSWORD_HERE"
